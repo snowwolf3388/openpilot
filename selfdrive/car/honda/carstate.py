@@ -240,7 +240,7 @@ class CarState(CarStateBase):
       ret.gasPressed = ret.gas > 492
     else:
       ret.gas = cp.vl["POWERTRAIN_DATA"]["PEDAL_GAS"]
-      ret.gasPressed = ret.gas > 1e-5
+      ret.gasPressed = ret.gas > 20
 
     ret.steeringTorque = cp.vl["STEER_STATUS"]["STEER_TORQUE_SENSOR"]
     ret.steeringTorqueEps = cp.vl["STEER_MOTOR_TORQUE"]["MOTOR_TORQUE"]
